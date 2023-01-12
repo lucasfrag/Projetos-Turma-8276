@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Validação de formulários - Exemplo</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <header>
+            <h1>Cadastro de Login</h1>
+        </header>
+        <main>
+            <form method="POST" id="formPrincipal" action="sucesso.html">
+                <p>
+                    <label for="txtLogin">Login: </label>
+                    <input type="text" id="txtLogin" onblur="validaLogin()" required/>
+                </p>
+                
+                <p>
+                    <label for="txtSenha">Senha:</label>
+                    <input type="password" id="txtSenha" onblur="validaSenha();" required/>
+                    <img src="https://e7.pngegg.com/pngimages/673/828/png-clipart-question-mark-question-mark.png" 
+                        height="16px" 
+                        onmouseover="mostraDica();" 
+                        onmouseout="escondeDica();"
+                    />
+                    <span class="dica" id="dicaTexto">Senha precisa ter ao menos 6 caracteres</span>
+                </p>
+                <p><label for="txtDataNascimento">Nascimento:</el><input type="date" id="txtDataNascimento" /></p>
+                <p><input type="submit" value="OK" /></p>
+            </form>
+        </main>
+
+        <button onclick="gerarPDF()">GERAR PDF</button>
+
+        <!-- Fazer chamadas JS antes de fechar o body -->
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
+
